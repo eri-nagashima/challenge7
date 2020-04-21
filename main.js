@@ -19,6 +19,5 @@ if(numbers === correctAnswer) {
 }
 
 
-
 /*   マイルストーン2   */
 // for文で完成したら、for文箇所をコメントアウトし、while文で書き換えてみましょう。
