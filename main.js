@@ -9,13 +9,17 @@
 alert('You got 5 guesses. Guess 1 to 5');
 let numbers = prompt('What do you guess?');
 
-let correctAnswer = 2;
+let correctAnswer = [2];
 let wrongAnswer = [1, 3, 4, 5];
 
-if(numbers === correctAnswer) {
+// for (;;)
+if(numbers == correctAnswer) {
     alert('Good job! See what happens next :)');
-} else {
+    // break; →breakでループを抜ける？？
+} else if(numbers == wrongAnswer.length) {
     prompt('Ops! Maybe, another try?');
+} else {
+    guess = prompt('Use 1 to 5 to guess an answer!');
 }
 
 
