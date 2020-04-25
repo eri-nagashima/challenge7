@@ -12,9 +12,14 @@ let numbers = prompt('What do you guess?');
 let correctAnswer = [2];
 let wrongAnswer = [1, 3, 4, 5];
 
-for (let i = 0; ; i++) {
+for (let i = 0; i < 4; i++) {
   if (numbers == correctAnswer) {
     alert('Good job! See what happens next :)');
+    const image = document.getElementById('image');
+    image.innerHTML = `
+      <h1>You made it! 🎮</h1>
+      <iframe src="https://giphy.com/embed/11sBLVxNs7v6WA" width="480" height="217" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cheer-cheering-11sBLVxNs7v6WA"></a></p>
+    `;
     break;
   } else if (
     numbers == wrongAnswer[0] ||
@@ -28,11 +33,5 @@ for (let i = 0; ; i++) {
   }
 }
 
-const image = document.getElementById('image');
-image.innerHTML = `
-  <h1>You made it! 🎮</h1>
-  <iframe src="https://giphy.com/embed/11sBLVxNs7v6WA" width="480" height="217" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cheer-cheering-11sBLVxNs7v6WA"></a></p>
-`;
-
-/*   マイルストーン2   */
-// for文で完成したら、for文箇所をコメントアウトし、while文で書き換えてみましょう。
+// /*   マイルストーン2   */
+// // for文で完成したら、for文箇所をコメントアウトし、while文で書き換えてみましょう。
