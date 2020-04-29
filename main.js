@@ -6,20 +6,51 @@
 // ヒント１：if文とも組み合わせて、推測が当たった場合はalertで'Good job! See what happens next :)'を表示。当たったらゲーム終了にする。
 // ヒント２：外れたらpromptで'Ops! Maybe, another try?'のメッセージとともに記入欄を表示。
 
+// alert('You got 5 guesses. Guess 1 to 5');
+// let numbers = prompt('What do you guess?');
+
+// let correctAnswer = [2];
+// let wrongAnswer = [1, 3, 4, 5];
+
+// for (let i = 0; i < 4; i++) {
+//   if (numbers == correctAnswer) {
+//     alert('Good job! See what happens next :)');
+//     const image = document.getElementById('image');
+//     image.innerHTML = `
+//   <h1>You made it! 🎮</h1>
+//   <iframe src="https://giphy.com/embed/11sBLVxNs7v6WA" width="480" height="217" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cheer-cheering-11sBLVxNs7v6WA"></a></p>
+// `;
+//     break;
+//   } else if (
+//     numbers == wrongAnswer[0] ||
+//     numbers == wrongAnswer[1] ||
+//     numbers == wrongAnswer[2] ||
+//     numbers == wrongAnswer[3]
+//   ) {
+//     numbers = prompt('Ops! Maybe, another try?');
+//   } else {
+//     numbers = prompt('Use 1 to 5 to guess an answer!');
+//   }
+// }
+
+/*   マイルストーン2   */
+// for文で完成したら、for文箇所をコメントアウトし、while文で書き換えてみましょう。
 alert('You got 5 guesses. Guess 1 to 5');
 let numbers = prompt('What do you guess?');
 
 let correctAnswer = [2];
 let wrongAnswer = [1, 3, 4, 5];
 
-for (let i = 0; i < 4; i++) {
+let i = 0;
+while (i < 4) {
+  i++;
   if (numbers == correctAnswer) {
     alert('Good job! See what happens next :)');
     const image = document.getElementById('image');
     image.innerHTML = `
-      <h1>You made it! 🎮</h1>
-      <iframe src="https://giphy.com/embed/11sBLVxNs7v6WA" width="480" height="217" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cheer-cheering-11sBLVxNs7v6WA"></a></p>
-    `;
+  <h1>You made it! 🎮</h1>
+  <iframe src="https://giphy.com/embed/11sBLVxNs7v6WA" width="480" height="217" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cheer-cheering-11sBLVxNs7v6WA"></a></p>
+`;
     break;
   } else if (
     numbers == wrongAnswer[0] ||
@@ -27,11 +58,8 @@ for (let i = 0; i < 4; i++) {
     numbers == wrongAnswer[2] ||
     numbers == wrongAnswer[3]
   ) {
-    prompt('Ops! Maybe, another try?');
+    numbers = prompt('Ops! Maybe, another try?');
   } else {
-    guess = prompt('Use 1 to 5 to guess an answer!');
+    numbers = prompt('Use 1 to 5 to guess an answer!');
   }
 }
-
-// /*   マイルストーン2   */
-// // for文で完成したら、for文箇所をコメントアウトし、while文で書き換えてみましょう。
