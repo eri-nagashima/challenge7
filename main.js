@@ -43,7 +43,6 @@ let wrongAnswer = [1, 3, 4, 5];
 
 let i = 0;
 while (i < 4) {
-  i++;
   if (numbers == correctAnswer) {
     alert('Good job! See what happens next :)');
     const image = document.getElementById('image');
@@ -62,4 +61,5 @@ while (i < 4) {
   } else {
     numbers = prompt('Use 1 to 5 to guess an answer!');
   }
+  i++;
 }
